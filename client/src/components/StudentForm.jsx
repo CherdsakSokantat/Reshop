@@ -19,7 +19,7 @@ return (
 	<div className="form-wrapper">
 	<Formik {...props} validationSchema={validationSchema}>
 		<Form>
-		<FormGroup>
+		<FormGroup className="mt-3">
 			<label htmlFor="name">Name</label>
 			<Field name="name" type="text"
 				className="form-control" />
@@ -29,7 +29,7 @@ return (
 			component="span"
 			/>
 		</FormGroup>
-		<FormGroup>
+		<FormGroup className="mt-3">
 			<label htmlFor="email">Email</label>
 
 			<Field name="email" type="text"
@@ -40,7 +40,7 @@ return (
 			component="span"
 			/>
 		</FormGroup>
-		<FormGroup>
+		<FormGroup className="mt-3">
 			<label htmlFor="rollno">rollno</label>
 
 			<Field name="rollno" type="number"
@@ -51,7 +51,7 @@ return (
 			component="span"
 			/>
 		</FormGroup>
-		<Button variant="danger" size="lg"
+		<Button variant="danger" size="lg" className="mt-3"
 			block="block" type="submit">
 			{props.children}
 		</Button>

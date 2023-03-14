@@ -18,7 +18,7 @@ app.use('/students', studentRoute)
 
 // })
 // db config 
-const connection = "mongodb://db:27017/mern";
+const connection = 'mongodb://mongo:27017/mongo-docker';
 // const connection = "mongodb://localhost:27017/slackchannels";
 
 mongoose.connect(connection, {

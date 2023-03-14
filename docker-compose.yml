@@ -1,5 +1,6 @@
 services:
   client:
+    container_name: client
     build:
       context: ./client
       dockerfile: Dockerfile.reactUI
@@ -11,23 +12,26 @@ services:
     stdin_open: true
     restart: always
     depends_on:
-      - db
+      - mongo
     networks:
       - mern-stack-net
-  server: 
+  server:
+    container_name: server 
     build:
       context: ./server
       dockerfile: Dockerfile.node
     ports: 
-      - "4000:4000"    #external:internal 
+      - "4000:4000"    #external:internal
+    restart: always 
     volumes: 
       - ./server:/app 
       - /app/node_modules
     depends_on:
-      - db
+      - mongo
     networks:
       - mern-stack-net
-  db:
+  mongo:
+    container_name: mongo
     volumes:
       - mongo-data:/data/db
     image: mongo:latest
@@ -35,6 +39,7 @@ services:
       - "27017:27017" 
     networks:
       - mern-stack-net
+
 
 networks:
   mern-stack-net: 
