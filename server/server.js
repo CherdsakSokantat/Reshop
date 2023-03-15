@@ -13,13 +13,12 @@ const port = process.env.PORT || 4000;
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.json())
 app.use(cors())
-app.use('/students', studentRoute)
+app.use('/api/students', studentRoute)
 
 
 // })
 // db config 
-const connection = 'mongodb://mongo:27017/mongo-docker';
-// const connection = "mongodb://localhost:27017/slackchannels";
+const connection = 'mongodb://mongo';
 
 mongoose.connect(connection, {
  
@@ -41,7 +40,7 @@ mongoose.connect(connection, {
 // run initially to populate database which is mounted locally 
 // record = json object 
 
-app.get('/', (req,res) => {
+app.get('/api', (req,res) => {
     console.log('connecting to route route "/"')
     res.status(200).send('MERN Stack')
 })
