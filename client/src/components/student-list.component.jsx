@@ -8,7 +8,7 @@ const [students, setStudents] = useState([]);
 
 useEffect(() => {
 	axios
-	.get("http://localhost:4000/api/students/")
+	.get("http://mern.com/api/students/")
 	.then(({ data }) => {
 		setStudents(data);
 	})
