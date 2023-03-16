@@ -18,7 +18,7 @@ app.use('/api/students', studentRoute)
 
 // })
 // db config 
-const connection = 'mongodb://mongo-service:27017';
+const connection = 'mongodb://mongo:27017';
 
 mongoose.connect(connection, {
  

@@ -21,7 +21,7 @@ const [formValues, setFormValues] = useState({
 const onSubmit = (studentObject) => {
 	axios
 	.put(
-		"http://mern.com/api/students/update-student/" +
+		"http://localhost:4000/api/students/update-student/" +
 		id,
 		studentObject
 	)
@@ -38,7 +38,7 @@ const onSubmit = (studentObject) => {
 useEffect(() => {
 	axios
 	.get(
-		"http://mern.com/api/students/edit-student/"
+		"http://localhost:4000/api/students/edit-student/"
 		+ id
 	)
 	.then((res) => {
