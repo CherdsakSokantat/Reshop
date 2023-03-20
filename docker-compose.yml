@@ -24,8 +24,8 @@ services:
       - "4000:4000"    #external:internal
     restart: always 
     volumes: 
-      - ./server:/app 
-      - /app/node_modules
+      - ./server:/server 
+      - /server/node_modules
     depends_on:
       - mongo
     networks:
