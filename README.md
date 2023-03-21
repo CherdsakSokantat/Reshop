@@ -49,7 +49,7 @@ docker-compose up -d
 5173: Front-end
 4000: Back-end
 ```
-Shutting down 
+Shut down ports
 ```bash
 docker-compose down
 ```
