@@ -82,5 +82,5 @@ http://mern.com/
 
 ### Shutting down kubernetes cluster
 ```bash
-kubectl shutdown all -all
+kubectl delete all --all
 ```
