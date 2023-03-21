@@ -7,7 +7,12 @@ Within repository contains both front-end and back-end folder.
 Within each folder contains dockerfile declaring the environment.
 Docker-Compose was used to create the container containing services for application.
 
+# Group Members 🐱‍💻
+นายกษิดิศ ชมภูทอง 623040208-0 
+นายวชิรวิทย์  พิทักษ์วาณิชย์   623040316-7
+นายเชิดศักดิ์  โสกัณทัต 623040558-3 
 # Installation 📁
+
 ## Front-end
 
 Run the project locally via npm
@@ -59,8 +64,18 @@ Make sure that ingress has been installed in your device. if not, please install
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.0.0/deploy/static/provider/cloud/deploy.yaml
 ```
 
-Also, makes sure that 127.0.0.1 mern.com has been added to your host file in system32/driver/etc
+Also, makes sure that 127.0.0.1 mern.com has been added to your host file in windows/system32/driver/etc
+```bash
+# host file example
+127.0.0.1 mern.com
+# Added by Docker Desktop
+1.1.1.3 host.docker.internal
+1.0.1.4 gateway.docker.internal
+# To allow the same kube context to work on the host and the container:
+127.0.0.1 kubernetes.docker.internal
+# End of section
 
+```
 ### Running kubernetes cluster
 ```bash
 cd eks
